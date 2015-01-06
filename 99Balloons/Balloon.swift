@@ -7,11 +7,13 @@
 //
 
 import Foundation
-
+//solution has import UIKit so you can do
+// image = UIImage(named:"")
 
 func getImage(myNum : Int) -> String {
     var retImage = ""
     
+    //solution has no case 0; it uses default for this case
     switch myNum {
     case 0:
         retImage = "RedBalloon1.jpg"
@@ -22,7 +24,7 @@ func getImage(myNum : Int) -> String {
     case 3:
         retImage = "RedBalloon4.jpg"
     default:
-        retImage = "RedBalloon4.jpg"
+        retImage = "RedBalloon1.jpg"
     }
     
     return retImage
@@ -31,5 +33,6 @@ func getImage(myNum : Int) -> String {
 
 struct Balloon {
     var balloonNum = 0
-    var image = getImage(Int(arc4random_uniform(UInt32(3))))
+    //we should get 0 to 3 back?
+    var image = getImage(Int(arc4random_uniform(UInt32(4))))
 }
